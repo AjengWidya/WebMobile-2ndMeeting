@@ -1,0 +1,81 @@
+/* main.css */
+
+/*.container {
+  background: #eee;
+  overflow: auto;
+} */
+.no-flexbox	.container	{
+	background:	#eee;
+	overflow:	auto;
+}
+.flexbox	.container	{
+		display:	-webkit-box;
+		display:	-ms-flexbox;
+		display:	flex;
+		background:	#eee;
+		overflow:	auto;
+}
+
+/*
+.container .col {
+    width: 27%;
+    padding: 30px 3.15% 0;
+    float: left;
+}*/
+.no-flexbox	.container	.col	{
+	width:	27%;
+	padding:	30px	3.15%	0;
+	float:	left;
+}
+.flexbox	.container	.col	{
+		flex:	1;
+		padding:	1rem;
+}
+
+/* TODO 3 - style the page */
+
+/* TODO 4 - use media query. Berguna untuk memastikan agar tulisan dapat tetap terbaca walaupun lebar layout diperkecil */
+/*@media screen and (max-width: 48rem)	{
+	.container	.col	{
+			width:	95%;
+	}
+}*/
+@media	screen	and	(max-width:	48rem)	{
+	.no-flexbox	.container	.col	{
+			width:	95%;
+	}
+}
+@media	screen	and	(max-width:	48rem)	{
+	.flexbox	.container	{
+					display:	-webkit-box;
+					display:	-ms-flexbox;
+					display:	flex;
+					flex-flow:	column;
+	}
+}
+
+/* TODO 5.2 - use flexbox */
+/* Mendefinisikan sebagai flex container */
+.container	{
+		display: -webkit-box;		/*	OLD	-	iOS	6-,	Safari	3.1-6	*/
+		display: -ms-flexbox;		/*	TWEENER	-	IE	10	*/
+		display: flex;				/*	NEW,	Spec	-	Firefox,	Chrome,	Opera	*/
+		background:	#eee;		
+		overflow:	auto;
+}
+.container	.col	{
+		flex:	1;
+		padding:	1rem;
+}
+
+.container	.col:nth-child(1);
+
+/* TODO 5.4 - use media query with Flexbox. Mengubah tampilan dari 3 kolom menjadi 1 kolom pada lebar layout device tertentu*/
+@media	screen	and	(max-width:	48rem)	{
+		.container	{
+				display:	-webkit-box;
+				display:	-ms-flexbox;
+				display:	flex;
+				flex-flow:	column;
+		}
+}
